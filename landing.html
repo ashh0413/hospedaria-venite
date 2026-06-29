@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hospedaria Venite | Since 1955</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;600;700&amp;family=Space+Grotesk:wght@500&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Design System Tokens & Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e5e2db",
+                    "on-error": "#ffffff",
+                    "on-background": "#1c1c18",
+                    "primary": "#9c3f00",
+                    "on-primary-fixed-variant": "#7a3000",
+                    "tertiary": "#75570f",
+                    "on-secondary-fixed-variant": "#00419e",
+                    "on-surface-variant": "#584238",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#fffbff",
+                    "outline": "#8c7166",
+                    "surface-container-high": "#ebe8e1",
+                    "surface-bright": "#fcf9f2",
+                    "outline-variant": "#e0c0b2",
+                    "primary-fixed-dim": "#ffb693",
+                    "error": "#ba1a1a",
+                    "surface-container": "#f1eee7",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e5e2db",
+                    "tertiary-container": "#907027",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#001946",
+                    "secondary-fixed-dim": "#b1c5ff",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#351000",
+                    "secondary-container": "#6c98ff",
+                    "primary-container": "#c45100",
+                    "tertiary-fixed": "#ffdea1",
+                    "on-tertiary-fixed-variant": "#5c4300",
+                    "on-tertiary-fixed": "#261900",
+                    "surface-dim": "#dcdad3",
+                    "surface": "#fcf9f2",
+                    "secondary": "#2559bd",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f6f3ec",
+                    "surface-tint": "#a04100",
+                    "inverse-surface": "#31312c",
+                    "inverse-primary": "#ffb693",
+                    "inverse-on-surface": "#f3f0e9",
+                    "primary-fixed": "#ffdbcc",
+                    "on-secondary-container": "#002f76",
+                    "background": "#fcf9f2",
+                    "on-tertiary-container": "#fffbff",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#e9c170",
+                    "secondary-fixed": "#dae2ff",
+                    "on-surface": "#1c1c18"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1140px",
+                    "unit": "8px",
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Libre Caslon Text"],
+                    "headline-xl": ["Libre Caslon Text"],
+                    "headline-lg": ["Libre Caslon Text"],
+                    "label-sm": ["Space Grotesk"],
+                    "body-lg": ["Work Sans"],
+                    "body-md": ["Work Sans"],
+                    "headline-md": ["Libre Caslon Text"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        /* Global Grain Overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/natural-paper.png');
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        .arch-container {
+            border-radius: 50% 50% 0 0 / 15% 15% 0 0;
+        }
+
+        .scrolling-text {
+            white-space: nowrap;
+            animation: scroll 40s linear infinite;
+        }
+
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .seashell-divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+        .seashell-divider::before,
+        .seashell-divider::after {
+            content: "";
+            height: 1px;
+            flex: 1;
+            background: linear-gradient(to right, transparent, var(--tw-outline-variant), transparent);
+        }
+
+        .parallax-bg {
+            background-attachment: fixed;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-fixed-dim selection:text-on-primary-fixed overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-surface-variant/30 dark:bg-surface-container-highest/20 backdrop-blur-sm shadow-sm">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<button aria-label="Menu" class="text-primary dark:text-primary-fixed-dim transition-transform active:scale-95 md:hidden">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex gap-6">
+<a class="font-label-sm text-label-sm text-primary border-b-2 border-primary pb-1" href="landing.html">Heritage Home</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="menu.html">Goan Kitchen</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="bar.html">Bohemian Bar</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="findus.html">Find Us</a>
+</nav>
+<div class="flex flex-col items-center">
+<h1 class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed-dim tracking-tight">Hospedaria Venite</h1>
+<span class="font-label-sm text-label-sm text-on-surface-variant tracking-widest uppercase">Since 1955</span>
+</div>
+<a href="findus.html" aria-label="Book Online" class="text-primary dark:text-primary-fixed-dim transition-transform active:scale-95">
+<span class="material-symbols-outlined" data-icon="book_online">book_online</span>
+</a>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative h-[795px] flex flex-col items-center justify-center text-center px-margin-mobile">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-1000 scale-105 hover:scale-100" data-alt="A warm, grainy vintage photograph of the iconic wooden matchbox balconies of Panjim's Fontainhas district at golden hour. The weathered wood, peeling yellow paint, and narrow cobblestone street below evoke a 1950s nostalgic atmosphere. The lighting is soft and honey-hued, highlighting the historic Portuguese colonial architecture and rustic textures of Hospedaria Venite." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBPw-uIO3ufXx4me_uaqrfcGvAMTIOXevU_qw9lROYo1_yasNdlnR0L7iKVkQL3C9JQRsuwKC_Wnr2askDe-w0DpZ91OFJa16hQWwoP6-yOXLyDH1d8QKaq3riJcUQhx8MfzktbEn7Xhmk_MTFHyg6EVfXuNQ3P6rryiocAe-QVhk70zyRQxOAZEWe1jAcC_dQdTIooHgEvFFru16ic6zyrDmEKAoU_lMjfPI2_ugXrUCo2whXfg027mDy86GruJGWeUsEn5HEl6LE')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-3xl space-y-6">
+<p class="font-label-sm text-label-sm text-primary uppercase tracking-[0.3em]">Hospedaria Venite</p>
+<h2 class="font-headline-xl text-headline-xl text-on-background md:text-6xl italic">"Since 1955: A Window into Old Goa."</h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-gutter pt-8">
+<a href="menu.html" class="px-8 py-4 bg-primary text-on-primary font-label-sm text-label-sm tracking-widest uppercase hover:bg-primary-container transition-all active:scale-95 shadow-md inline-block text-center">
+                        View the Menu
+                    </a>
+<a href="findus.html" class="px-8 py-4 border border-primary text-primary font-label-sm text-label-sm tracking-widest uppercase hover:bg-primary-fixed-dim/20 transition-all active:scale-95 inline-block text-center">
+                        Book a Balcony Table
+                    </a>
+</div>
+</div>
+</section>
+<!-- The Scrollytelling History -->
+<section class="bg-surface-container-low py-24 px-margin-mobile relative overflow-hidden">
+<!-- Decorative Arch Motif -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-16 bg-background rounded-b-full"></div>
+<div class="max-w-container-max mx-auto grid md:grid-columns-12 gap-gutter items-center">
+<div class="md:col-span-6 space-y-8">
+<div class="seashell-divider">
+<span class="material-symbols-outlined text-primary text-2xl" data-icon="waves">waves</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">The 200-Year-Old Whisper</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Step inside and feel the temperature drop as the 200-year-old thick lime-washed walls breathe. Our story isn't just about food; it's about the seven decades of sailors, dreamers, and locals who have shared conversations over these very wooden tables.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Founded in 1955 by the ancestors of the current family, Venite remains a sanctuary of Indo-Portuguese hospitality in the heart of Panjim. Every crack in the plaster tells a story of a Goa that was.
+                    </p>
+<div class="pt-8">
+<div class="flex items-center gap-4 text-primary">
+<span class="font-headline-md text-headline-md">70+</span>
+<span class="font-label-sm text-label-sm uppercase tracking-tighter">Years of Shared Secrets</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-6 relative group">
+<div class="arch-container overflow-hidden shadow-2xl border-4 border-surface-container-highest">
+<img class="w-full aspect-[4/5] object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A detailed close-up of a 200-year-old wall inside a historic Goan restaurant. The wall is covered in layers of weathered lime wash and authentic hand-drawn graffiti, sketches, and notes left by travelers over decades. The lighting is warm and dim, catching the deep textures of the plaster and the faded terracotta hues of the structural elements." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNBQVVDQpzQoogaDKDY6WFx5gigsFb77rPFF3a0AEIXrQ85War0gnxb97iKwluy72xkzyO2xxldMX8TxmpWTgGYFuFOkXhMg5uLUwqK6S7a9JW7aHSqCvwxESFvU_UVJBJAEP8ertgEDDRznz9-ezMRaa4h8DC5NKwTuXrTFhEIGUyBWj-O5fRNrR47-iM29x0_le8erH_SxWhdW3c0ig4SiUsvr1WImP9bImwQDIAYSXBAh-z2mnghxMm1fYJkcCsoONz-PbhK4Y"/>
+</div>
+<!-- Hand-drawn flourish badge -->
+<div class="absolute -bottom-6 -left-6 bg-tertiary-container text-on-tertiary-container p-6 rounded-full shadow-lg border border-outline/30 transform rotate-[-12deg]">
+<span class="font-label-sm text-label-sm">Estd. 1955</span>
+</div>
+</div>
+</div>
+</section>
+<!-- The Graffiti Walls (Scrolling Marquee Style) -->
+<section class="bg-surface py-12 border-y border-outline-variant/30 overflow-hidden">
+<div class="scrolling-text flex gap-12 items-center">
+<span class="font-headline-md text-headline-md text-outline/40 italic">Notes from Travelers</span>
+<span class="material-symbols-outlined text-outline/40" data-icon="edit_square">edit_square</span>
+<span class="font-headline-md text-headline-md text-outline/40 italic">Love letters to Panjim</span>
+<span class="material-symbols-outlined text-outline/40" data-icon="restaurant">restaurant</span>
+<span class="font-headline-md text-headline-md text-outline/40 italic">Fisherman's Tales</span>
+<span class="material-symbols-outlined text-outline/40" data-icon="sailing">sailing</span>
+<span class="font-headline-md text-headline-md text-outline/40 italic">Since 1955</span>
+<span class="material-symbols-outlined text-outline/40" data-icon="history">history</span>
+<!-- Duplicate for seamless scroll -->
+<span class="font-headline-md text-headline-md text-outline/40 italic">Notes from Travelers</span>
+<span class="material-symbols-outlined text-outline/40" data-icon="edit_square">edit_square</span>
+<span class="font-headline-md text-headline-md text-outline/40 italic">Love letters to Panjim</span>
+<span class="material-symbols-outlined text-outline/40" data-icon="restaurant">restaurant</span>
+</div>
+</section>
+<!-- Experience Grid -->
+<section class="py-24 px-margin-mobile max-w-container-max mx-auto">
+<div class="text-center space-y-4 mb-16">
+<h3 class="font-headline-lg text-headline-lg text-on-background">Live the Heritage</h3>
+<div class="seashell-divider max-w-xs mx-auto">
+<span class="material-symbols-outlined text-primary" data-icon="flatware">flatware</span>
+</div>
+</div>
+<div class="grid md:grid-cols-3 gap-gutter">
+<!-- Bento Card 1: Kitchen -->
+<div class="md:col-span-2 group bg-surface-container p-unit border border-outline-variant/50 relative overflow-hidden">
+<div class="relative z-10 p-8 flex flex-col h-full justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-widest">Goan Kitchen</span>
+<h4 class="font-headline-md text-headline-md mt-2">Authentic Flavors</h4>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mt-4">
+                            Savor our signature Steak Venite or Garlic Butter Prawns, recipes passed down through three generations of chefs.
+                        </p>
+</div>
+<div class="absolute inset-0 z-0 opacity-20 group-hover:opacity-40 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="Close up of a traditional Goan seafood dish served on a rustic ceramic plate. The scene shows vibrant red spices, fresh coriander, and prawns sizzling in garlic butter. Background features textured wooden tables and a hint of a vintage kitchen atmosphere with copper utensils." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3CScqbZEtyxLSxXt9O-KT8SHWoCeGdtQqwetxO_5qoZ1Q2U3ONJcJaXmcyC7NGAYS9Wz0LKymV_CihaLM4y6SRPR5wmD8kxYBMgmM35TdUCpHWLDwDcF5nAHfDYGS_6DBugSZxCCwl9YNdsMW9i6iYMBdSc89XSMIoc4e2kRi9uxP2qtpeC0tLV4vTl7eKVtdOuBRLkUgTnn4toSpxVeD2rJTFY3w9KPPtnT1RmX-rU1OD2xi-nY639uHaJr8MoucPjZck6G2SGU"/>
+</div>
+</div>
+<!-- Bento Card 2: Bar -->
+<div class="group bg-tertiary-fixed text-on-tertiary-fixed p-8 flex flex-col justify-end min-h-[300px] border border-outline-variant/50">
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="local_bar">local_bar</span>
+<h4 class="font-headline-md text-headline-md">The Bohemian Bar</h4>
+<p class="font-label-sm text-label-sm mt-2 opacity-80">Local Feni &amp; Global Stories</p>
+</div>
+<!-- Bento Card 3: Find Us -->
+<div class="md:col-span-3 flex flex-col md:flex-row bg-surface-container-highest border border-outline-variant/50">
+<div class="flex-1 p-12 space-y-6">
+<h4 class="font-headline-md text-headline-md">Find Our Balcony</h4>
+<p class="font-body-md text-body-md">Located at 331, Rua 31 de Janeiro, Panjim. Look for the yellow house with the most stories to tell.</p>
+<a class="inline-flex items-center gap-2 font-label-sm text-label-sm text-primary uppercase border-b border-primary pb-1" href="findus.html">
+                            Get Directions
+                            <span class="material-symbols-outlined text-sm" data-icon="north_east">north_east</span>
+</a>
+</div>
+<div class="w-full md:w-1/3 h-64 md:h-auto overflow-hidden">
+<div class="w-full h-full grayscale hover:grayscale-0 transition-all duration-700" data-location="Panjim, Goa" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAxjY_FIsreALbNiBQ32quGz3WHQNEx2Dqv_XYQgYjit5c8F1It7EI1tC1eklWjByfc9eSn1GpM9xbAYae6efvGum4lI9EiX-d-v14nj3PK9kNXDwCreLBdR92ezYeggikBnwDNimb4MyMpFXEnxs8sq5iimF01F6n8KI9gcclA8DsU_kXSjPYylgRi0CgIdSGsnc4HbqJ8qdEw9od4Y9Cogqd11mO0R--s_w6juSG0TnNtvjHl1MFrzv-JCqbtkbiKeP4z03Z9iCw')"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-24 bg-primary text-on-primary text-center px-margin-mobile relative overflow-hidden">
+
+<div class="relative z-10 max-w-2xl mx-auto space-y-8">
+<h3 class="font-headline-lg text-headline-lg">Your table on the street awaits.</h3>
+<p class="font-body-lg text-body-lg opacity-90">Experience the soul of Fontainhas from our historic balconies. Reservations recommended for dinner.</p>
+<a href="findus.html" class="px-12 py-5 bg-surface text-primary font-label-sm text-label-sm tracking-widest uppercase hover:bg-surface-bright transition-all shadow-xl active:scale-95 inline-block text-center">
+                    Reserve a Table
+                </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant dark:border-outline">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
+<div class="space-y-4 text-center md:text-left">
+<h2 class="font-headline-md text-headline-md text-on-surface">Venite</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant max-w-[240px]">
+                    © 1955 Hospedaria Venite Panjim. Crafted with soul.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:underline transition-all" href="landing.html">The Story</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:underline transition-all" href="findus.html">Reservations</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:underline transition-all" href="menu.html">Goan Kitchen</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:underline transition-all" href="findus.html">Find Us</a>
+</div>
+<div class="flex gap-4">
+<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all" aria-label="Share">
+<span class="material-symbols-outlined text-sm" data-icon="share">share</span>
+</a>
+<a href="mailto:info@hospedariavenite.com" class="w-10 h-10 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all" aria-label="Email">
+<span class="material-symbols-outlined text-sm" data-icon="mail">mail</span>
+</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for scrollytelling parallax effect
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.pageYOffset;
+            const heroBg = document.querySelector('.hero-bg');
+            if (heroBg) {
+                heroBg.style.transform = `translateY(${scrollPos * 0.4}px)`;
+            }
+        });
+
+        // Initialize Material Icons with weights
+        document.querySelectorAll('.material-symbols-outlined').forEach(icon => {
+            if (icon.closest('[data-weight="fill"]')) {
+                icon.style.fontVariationSettings = "'FILL' 1";
+            }
+        });
+    </script>
+</body></html>

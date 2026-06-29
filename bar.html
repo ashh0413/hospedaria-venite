@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hospedaria Venite | Bohemian Bar</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;600;700&amp;family=Space+Grotesk:wght@500&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e5e2db",
+                    "on-error": "#ffffff",
+                    "on-background": "#1c1c18",
+                    "primary": "#9c3f00",
+                    "on-primary-fixed-variant": "#7a3000",
+                    "tertiary": "#75570f",
+                    "on-secondary-fixed-variant": "#00419e",
+                    "on-surface-variant": "#584238",
+                    "on-error-container": "#93000a",
+                    "on-primary-container": "#fffbff",
+                    "outline": "#8c7166",
+                    "surface-container-high": "#ebe8e1",
+                    "surface-bright": "#fcf9f2",
+                    "outline-variant": "#e0c0b2",
+                    "primary-fixed-dim": "#ffb693",
+                    "error": "#ba1a1a",
+                    "surface-container": "#f1eee7",
+                    "on-secondary": "#ffffff",
+                    "surface-variant": "#e5e2db",
+                    "tertiary-container": "#907027",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#001946",
+                    "secondary-fixed-dim": "#b1c5ff",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#351000",
+                    "secondary-container": "#6c98ff",
+                    "primary-container": "#c45100",
+                    "tertiary-fixed": "#ffdea1",
+                    "on-tertiary-fixed-variant": "#5c4300",
+                    "on-tertiary-fixed": "#261900",
+                    "surface-dim": "#dcdad3",
+                    "surface": "#fcf9f2",
+                    "secondary": "#2559bd",
+                    "on-tertiary": "#ffffff",
+                    "surface-container-low": "#f6f3ec",
+                    "surface-tint": "#a04100",
+                    "inverse-surface": "#31312c",
+                    "inverse-primary": "#ffb693",
+                    "inverse-on-surface": "#f3f0e9",
+                    "primary-fixed": "#ffdbcc",
+                    "on-secondary-container": "#002f76",
+                    "background": "#fcf9f2",
+                    "on-tertiary-container": "#fffbff",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#e9c170",
+                    "secondary-fixed": "#dae2ff",
+                    "on-surface": "#1c1c18"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1140px",
+                    "unit": "8px",
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Libre Caslon Text"],
+                    "headline-xl": ["Libre Caslon Text"],
+                    "headline-lg": ["Libre Caslon Text"],
+                    "label-sm": ["Space Grotesk"],
+                    "body-lg": ["Work Sans"],
+                    "body-md": ["Work Sans"],
+                    "headline-md": ["Libre Caslon Text"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .noise-overlay {
+            pointer-events: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+            opacity: 0.05;
+            z-index: 9999;
+        }
+
+        .arch-top {
+            border-radius: 50% 50% 0 0 / 20% 20% 0 0;
+        }
+
+        .inner-pressed {
+            box-shadow: inset 0 2px 15px rgba(156, 63, 0, 0.1);
+        }
+
+        .azulejo-divider {
+            height: 24px;
+            background-image: radial-gradient(circle at 12px 12px, #8c7166 2px, transparent 0);
+            background-size: 24px 24px;
+            opacity: 0.3;
+        }
+
+        .bar-gradient {
+            background: linear-gradient(to bottom, rgba(28, 28, 24, 0) 0%, rgba(28, 28, 24, 0.8) 100%);
+        }
+
+        .textured-paper {
+            background-image: url("https://www.transparenttextures.com/patterns/aged-paper.png");
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container font-body-md">
+<div class="noise-overlay"></div>
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-surface/80 backdrop-blur-sm shadow-sm transition-all duration-300">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<button aria-label="Menu" class="p-2 active:scale-95 transition-transform text-primary md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="flex flex-col items-center">
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight md:block hidden">Hospedaria Venite</h1>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight md:hidden">Hospedaria Venite</h1>
+</div>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="landing.html">Heritage Home</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="menu.html">Goan Kitchen</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-label-sm text-label-sm" href="bar.html">Bohemian Bar</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="findus.html">Find Us</a>
+</nav>
+<div class="flex items-center gap-4">
+<a href="findus.html" aria-label="Book Online" class="p-2 active:scale-95 transition-transform text-primary">
+<span class="material-symbols-outlined">book_online</span>
+</a>
+</div>
+</nav>
+</header>
+<main class="relative overflow-hidden">
+<!-- Hero Section: The Soul of the Bar -->
+<section class="relative h-[707px] flex items-center">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center scale-105" data-alt="A moody, atmospheric photograph of the interior of a historic Goan bar at twilight. The scene is lit by soft, flickering candlelight reflecting off dark, weathered mahogany wood surfaces and vintage glassware. Warm amber and terracotta tones dominate the palette, showing a cozy, lived-in space with blurred social interaction in the background. The style is rustic yet elegant, emphasizing heritage architecture and a sense of timeless bohemian soul." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuABriIViHcgvLmNCxR-RtOzpOJuxsiym1nJ75GOcGxE5s8ZKqmN5hTvNJTj2xRGl9FybNZUDTPfeFU4P8uRQ0j6mmlTup_yxNQd0GwYlRuS1bonHp_mTRVVlye3nnC3DbQPc2U-eH1N4t8ItiNbVCl-vQg3lNJkbp_xDdGBeGtrAcz9WDBC1qNe6KBZTDILK2wd3X9Afp5LO7kyoaoygR2w56uewV94PCfw-yftlhiZi73fN953jQoymeiXYVGh1joFh9X-w_yDBPg')">
+</div>
+<div class="absolute inset-0 bar-gradient"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full text-white">
+<div class="max-w-2xl">
+<span class="font-label-sm text-label-sm text-primary-fixed uppercase tracking-[0.2em] mb-4 block">Since 1955</span>
+<h2 class="font-headline-xl text-headline-xl mb-6 leading-tight">Spirits of <br/><span class="italic text-primary-fixed-dim">Fontainhas.</span></h2>
+<p class="font-body-lg text-body-lg text-surface-container-highest/90 mb-8 leading-relaxed">
+                        Step into the social heart of Panjim's Latin Quarter. Here, time slows down over hand-carved mahogany, as the scent of fermented cashew and aged vinegar mingles with the evening breeze from the Mandovi.
+                    </p>
+<div class="flex flex-wrap gap-gutter">
+<a href="bar.html" class="bg-primary text-on-primary px-8 py-4 rounded-lg font-label-sm text-label-sm uppercase tracking-widest hover:bg-primary-container transition-all shadow-lg active:scale-95 flex items-center gap-2 text-center">
+                            Explore the Bar <span class="material-symbols-outlined text-sm">arrow_right_alt</span>
+</a>
+<a href="findus.html" class="border border-surface-container-highest text-surface-container-highest px-8 py-4 rounded-lg font-label-sm text-label-sm uppercase tracking-widest hover:bg-white/10 transition-all backdrop-blur-sm active:scale-95 inline-block text-center">
+                            Join the Social Hour
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- The Feni Experience: Bento Grid -->
+<section class="py-24 bg-surface-container-low px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col items-center mb-16 text-center">
+<div class="azulejo-divider w-32 mb-6"></div>
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-4">Crafting Liquid Heritage</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xl">From the classic Cashew Feni to our experimental infusions, every pour tells the story of the Goan spirit.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Feature 1: The Infusion -->
+<div class="md:col-span-2 relative group overflow-hidden rounded-xl h-96 shadow-sm border border-outline-variant/30">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A detailed shot of a rustic wooden bar counter where a variety of artisanal Feni infusions are stored in antique glass bottles. The lighting is warm and golden, highlighting the amber liquid and dried botanicals like cinnamon and star anise inside the jars. The background shows textured, lime-washed walls of a historic building in Fontainhas. The aesthetic is tactile and heritage-focused." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCgPTY8j7T7d6tVk3NHN9ftSqD_LKH3vRGgZpOaUZeKlm5V7UNZY1GfJt9KDJZ9UHq2LgCDxpnG74XRMA0GrX4o6bdBS65EdYTI20bjJ5a18BJah_FOi1-645otznGz9wrIGEH7qHCau3C-4UOs-O_95NXz0KEW6p1W2o78QC6AiORqBKjfKiL1KdmbRLqNzubT9-3ioUP20i1HU616YNFDH3XqbEApB3LvxAHA-wQfc7VM0p7ScRMaOOLr9iRFuk2ZFy954ttMjp8')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-8 text-white">
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-[10px] font-label-sm uppercase mb-4 inline-block">House Special</span>
+<h4 class="font-headline-md text-headline-md mb-2">The Venite Infusion</h4>
+<p class="font-body-md text-body-md opacity-90 max-w-md">Our signature Cashew Feni, double-distilled and rested with heritage spices for six lunar cycles.</p>
+</div>
+</div>
+<!-- Feature 2: Illustration -->
+<div class="bg-surface-container-high rounded-xl p-8 flex flex-col justify-between border border-outline-variant shadow-sm textured-paper relative overflow-hidden">
+<div class="absolute -right-8 -top-8 opacity-10">
+<span class="material-symbols-outlined text-[160px]" style="font-variation-settings: 'FILL' 0;">local_bar</span>
+</div>
+<div>
+<span class="material-symbols-outlined text-primary mb-4">history_edu</span>
+<h4 class="font-headline-md text-headline-md text-on-surface mb-2">The Ledger of Spirits</h4>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed italic">
+                                "Since 1955, this bar has been the sanctuary for poets, travelers, and the neighborhood elders who remember Panjim before the bridges."
+                            </p>
+</div>
+<div class="pt-6 border-t border-outline-variant/50">
+<a class="text-primary font-label-sm text-label-sm flex items-center gap-2 hover:gap-4 transition-all" href="landing.html">
+                                READ THE STORY <span class="material-symbols-outlined">north_east</span>
+</a>
+</div>
+</div>
+<!-- Feature 3: Small Card -->
+<div class="rounded-xl overflow-hidden shadow-sm h-80 group border border-outline-variant/30 relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" data-alt="A close-up photograph of a contemporary cocktail served in a vintage coupe glass. The drink is a bright, clear infusion with a thin slice of green chili and a sprig of fresh cilantro. It is placed on a rough, weathered wooden table next to a small flickering tea light. The overall mood is intimate and sophisticated, with rich shadows and warm highlights." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDZNUnDK0smBVX9DMIDotKcmeTU1UN7QtGMhAc59otnBomuQ9WCXoEao0cvcZLeYaxauHISc2daJNeagcnzKCaC_hclqS6-DQWq17CZRPjgZV1iWwQFk2iRw-Fo3MDtmsmVyvjA-gG-5S9_rdj_SXelziIbun_iwJabYEadRxMQ8mKKk9VUIz8ef1ii0JiS_mfGREkKCrJW96ESD3NgIqGqPnZkpc6SqAk78FST7Y3dWC-jqrJ9yeR5n5VYAKDivXXdfPteppfWiTU')">
+</div>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+<div class="absolute bottom-6 left-6 text-white">
+<h5 class="font-label-sm text-label-sm uppercase tracking-widest">Piquant Sour</h5>
+</div>
+</div>
+<!-- Feature 4: Large List -->
+<div class="md:col-span-2 bg-surface rounded-xl p-8 border border-outline-variant shadow-sm inner-pressed">
+<div class="flex justify-between items-end mb-8">
+<h4 class="font-headline-md text-headline-md text-primary">Bohemian Menu</h4>
+<span class="font-label-sm text-label-sm text-outline uppercase">Seasonal Selection</span>
+</div>
+<div class="space-y-6">
+<div class="flex justify-between items-center group cursor-pointer">
+<div class="flex-1">
+<div class="flex items-center gap-3">
+<h5 class="font-body-lg font-semibold text-on-surface group-hover:text-primary transition-colors">Urrak Lemonade</h5>
+<div class="h-[1px] flex-1 bg-outline-variant/50 border-dashed border-t"></div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Seasonal first-press cashew nectar with fresh lime and sea salt.</p>
+</div>
+<span class="ml-4 font-label-sm text-label-sm text-on-surface">₹350</span>
+</div>
+<div class="flex justify-between items-center group cursor-pointer">
+<div class="flex-1">
+<div class="flex items-center gap-3">
+<h5 class="font-body-lg font-semibold text-on-surface group-hover:text-primary transition-colors">Fontainhas Negroni</h5>
+<div class="h-[1px] flex-1 bg-outline-variant/50 border-dashed border-t"></div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Dukshiri Feni, sweet vermouth, and a dash of local bitters.</p>
+</div>
+<span class="ml-4 font-label-sm text-label-sm text-on-surface">₹550</span>
+</div>
+<div class="flex justify-between items-center group cursor-pointer">
+<div class="flex-1">
+<div class="flex items-center gap-3">
+<h5 class="font-body-lg font-semibold text-on-surface group-hover:text-primary transition-colors">Spiced Old Fashioned</h5>
+<div class="h-[1px] flex-1 bg-outline-variant/50 border-dashed border-t"></div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Aged Palm Feni, jaggery syrup, and orange peel.</p>
+</div>
+<span class="ml-4 font-label-sm text-label-sm text-on-surface">₹450</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Illustrations & Atmosphere Section -->
+<section class="py-24 bg-surface border-y border-outline-variant/20 overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="w-full aspect-[4/5] bg-surface-container-high rounded-t-full arch-top border border-outline-variant overflow-hidden relative shadow-lg">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A high-angle, artful shot of the Hospedaria Venite balcony overlooking a narrow cobblestone street in the Fontainhas district. The balcony has weathered green wooden railings and small tables with flowers. The street below is colorful with traditional Portuguese-style houses in ochre and blue. Warm evening sunlight creates deep shadows and a romantic, vintage atmosphere." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCpafMRgamxI_gNaCRtHnFTNshUEsSLcx2C7OOw80WONWEkgGClFu94gfKt2aBfoYx5X5X2mBGo9he0Ct9IuJJZOxd6ZJc9R6BahuGBt6d3Zj2lNz_GqhA5uzKXOtq_hd0dTvHRLDo3Q4H-e0nCjDNKbTe9k1HJn9BUikiXNYAP3O5TI2TXGqOPT3MjStGadyqz0RGONJRApVAT-9AWcfK4lfMxNgV8zCdkKGUn1FufGJpqCOs6VNdPyiQvsZ1zqYS6N0hMHBJboRQ')">
+</div>
+</div>
+<!-- Hand-drawn style floating element -->
+<div class="absolute -bottom-8 -right-8 bg-tertiary text-on-tertiary p-8 rounded-xl shadow-2xl max-w-xs textured-paper border border-on-tertiary/20">
+<span class="material-symbols-outlined text-4xl mb-4">local_bar</span>
+<h6 class="font-headline-md text-headline-md mb-2">The Balcony Seats</h6>
+<p class="font-body-md text-body-md opacity-90 leading-snug">The best view in Panjim for people-watching and sunset-sipping.</p>
+</div>
+</div>
+<div class="space-y-8">
+<span class="font-label-sm text-label-sm text-primary uppercase tracking-[0.3em]">Social Hour</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">A Lived-in <span class="italic">Atmosphere.</span></h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Our bar isn't just about the spirits; it's about the stories shared across our scarred wooden tables. Whether you're a regular from down the street or a traveler seeking the "real" Goa, you'll find a seat and a story here.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Daily Apertivo from 5:30 PM to 7:00 PM</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Curated Vinyl Selection (Jazz &amp; Goan Classics)</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Limited Batch Feni Tastings Weekly</span>
+</li>
+</ul>
+<div class="pt-8 flex items-center gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all flex items-center gap-2 group" href="bar.html">
+                            VIEW FULL COCKTAIL LIST <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+<div class="h-[1px] w-12 bg-outline-variant"></div>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all" href="landing.html">GALLERY</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-container-highest border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<h4 class="font-headline-md text-headline-md text-on-surface tracking-tight">Hospedaria Venite</h4>
+<p class="font-label-sm text-label-sm text-on-surface-variant italic">© 1955 Hospedaria Venite Panjim. Crafted with soul.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:underline transition-all" href="landing.html">The Story</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:underline transition-all" href="findus.html">Reservations</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:underline transition-all" href="menu.html">Goan Kitchen</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:underline transition-all" href="findus.html">Find Us</a>
+</div>
+<div class="flex gap-4">
+<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all opacity-80 hover:opacity-100" aria-label="Share">
+<span class="material-symbols-outlined text-xl">share</span>
+</a>
+<a href="https://maps.google.com/?q=Hospedaria+Venite+Fontainhas+Panjim+Goa" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full border border-outline flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all opacity-80 hover:opacity-100" aria-label="View on Map">
+<span class="material-symbols-outlined text-xl">map</span>
+</a>
+</div>
+</div>
+</footer>
+<!-- FAB (Suppressed based on prompt focus being a sub-section detail, but kept contextually if they wanted to book) -->
+<!-- Determined to suppress as it's a detail section -->
+<script>
+        // Micro-interaction for bar menu items
+        document.querySelectorAll('.group.cursor-pointer').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.querySelector('.bg-outline-variant').classList.add('bg-primary');
+            });
+            item.addEventListener('mouseleave', () => {
+                item.querySelector('.bg-outline-variant').classList.remove('bg-primary');
+            });
+        });
+
+        // Sticky Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2', 'bg-surface/95');
+                header.classList.remove('py-4', 'bg-surface/80');
+            } else {
+                header.classList.add('py-4', 'bg-surface/80');
+                header.classList.remove('py-2', 'bg-surface/95');
+            }
+        });
+    </script>
+</body></html>

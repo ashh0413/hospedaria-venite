@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Goan Kitchen | Hospedaria Venite</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;600;700&family=Space+Grotesk:wght@500&family=Work+Sans:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@100..900&family=Space+Grotesk:wght@100..900&family=Work+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .paper-grain {
+            position: relative;
+        }
+        .paper-grain::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 50;
+            opacity: 0.04;
+            background-image: url("https://www.transparenttextures.com/patterns/felt-tip.png");
+        }
+        .arch-container {
+            border-radius: 160px 160px 0 0;
+        }
+        .azulejo-border {
+            border-bottom: 2px solid transparent;
+            border-image: repeating-linear-gradient(to right, #2559bd 0, #2559bd 10px, transparent 10px, transparent 20px) 1;
+        }
+        .skew-hover:hover {
+            transform: translateY(-4px) rotate(-0.5deg);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e5e2db",
+                        "on-error": "#ffffff",
+                        "on-background": "#1c1c18",
+                        "primary": "#9c3f00",
+                        "on-primary-fixed-variant": "#7a3000",
+                        "tertiary": "#75570f",
+                        "on-secondary-fixed-variant": "#00419e",
+                        "on-surface-variant": "#584238",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#fffbff",
+                        "outline": "#8c7166",
+                        "surface-container-high": "#ebe8e1",
+                        "surface-bright": "#fcf9f2",
+                        "outline-variant": "#e0c0b2",
+                        "primary-fixed-dim": "#ffb693",
+                        "error": "#ba1a1a",
+                        "surface-container": "#f1eee7",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e5e2db",
+                        "tertiary-container": "#907027",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#001946",
+                        "secondary-fixed-dim": "#b1c5ff",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#351000",
+                        "secondary-container": "#6c98ff",
+                        "primary-container": "#c45100",
+                        "tertiary-fixed": "#ffdea1",
+                        "on-tertiary-fixed-variant": "#5c4300",
+                        "on-tertiary-fixed": "#261900",
+                        "surface-dim": "#dcdad3",
+                        "surface": "#fcf9f2",
+                        "secondary": "#2559bd",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f6f3ec",
+                        "surface-tint": "#a04100",
+                        "inverse-surface": "#31312c",
+                        "inverse-primary": "#ffb693",
+                        "inverse-on-surface": "#f3f0e9",
+                        "primary-fixed": "#ffdbcc",
+                        "on-secondary-container": "#002f76",
+                        "background": "#fcf9f2",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#e9c170",
+                        "secondary-fixed": "#dae2ff",
+                        "on-surface": "#1c1c18"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1140px",
+                        "unit": "8px",
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "headline-xl": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "label-sm": ["Space Grotesk"],
+                        "body-lg": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-md": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background paper-grain font-body-md overflow-x-hidden">
+<!-- Top Navigation -->
+<header class="w-full top-0 sticky z-40 bg-surface/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center gap-4">
+<button aria-label="Menu" class="active:scale-95 transition-transform md:hidden">
+<span class="material-symbols-outlined text-primary text-2xl">menu</span>
+</button>
+<!-- Desktop Navigation -->
+<nav class="hidden md:flex gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="landing.html">Heritage Home</a>
+<a class="font-label-sm text-label-sm text-primary border-b-2 border-primary pb-1" href="menu.html">Goan Kitchen</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="bar.html">Bohemian Bar</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="findus.html">Find Us</a>
+</nav>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight md:text-headline-xl">Hospedaria Venite</h1>
+<div class="flex items-center gap-4">
+<a href="findus.html" class="hidden md:block font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors">Find Us</a>
+<a href="findus.html" class="active:scale-95 transition-transform">
+<span class="material-symbols-outlined text-primary text-2xl">book_online</span>
+</a>
+</div>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12">
+<!-- Hero Section: Featured Items -->
+<section class="mb-20">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="w-full md:w-1/2">
+<span class="font-label-sm text-label-sm text-tertiary uppercase tracking-widest mb-4 block">Chef's Signature</span>
+<h2 class="font-headline-xl text-headline-xl text-on-background mb-6">Pork Vindaloo</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed italic">
+                        "A heritage recipe passed down through generations. Tender pork slow-cooked in a fiery infusion of Kashmiri chilies, garlic, and home-fermented coconut vinegar."
+                    </p>
+<div class="flex items-center gap-4">
+<span class="font-headline-md text-headline-md text-primary">₹650</span>
+<div class="h-px flex-grow bg-outline-variant"></div>
+<button class="bg-primary text-on-primary px-8 py-3 font-label-sm text-label-sm uppercase tracking-widest shadow-md hover:bg-on-primary-fixed-variant transition-all active:scale-95">
+                            Order Now
+                        </button>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative group">
+<div class="absolute -inset-4 border border-outline-variant rounded-xl -rotate-2 group-hover:rotate-0 transition-transform duration-500"></div>
+<div class="relative h-[400px] md:h-[500px] arch-container overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A rustic, top-down photograph of a rich, dark red Pork Vindaloo served in a traditional weathered clay pot. Beside it sits a small bowl of steamed white rice and a piece of crusty poi bread on a textured linen cloth. The lighting is warm and moody, reminiscent of a sun-drenched afternoon in a Goan villa, with deep shadows and vibrant earth tones reflecting a heritage culinary aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoX9DPJYyaXaZmNcQIlPC_oIEQknSAwarodahcVT_ZvwZJsxbWkDfRkN0SJuK-_JfvLik46g6x4H3_61xwWEbM6Z2o0BGIvGnStBIdHYlywFN3R7JmxMeGqT8nyXkXRlyfg_cHtH-rGxSh1pgX-nYcAeHsi97X24A_2feXH6-pvsg_zqsQ-doh65mpt2qvhqrBeDZXiA4p3ihQ12gXSctNTn7OGP9lWPulAF96dnKZZM40YAJPFQwqset_NPzwfFJ0vpb7g5bLamQ"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Category Navigation / Filter -->
+<nav class="sticky top-20 z-30 bg-surface-container-low/90 backdrop-blur-sm py-6 mb-12 border-y border-outline-variant/30 overflow-x-auto">
+<div class="flex justify-center gap-8 min-w-max px-4">
+<button class="menu-filter-btn active-filter font-label-sm text-label-sm uppercase tracking-widest text-primary border-b-2 border-primary pb-1" onclick="filterMenu('all')">All Dishes</button>
+<button class="menu-filter-btn font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-1" onclick="filterMenu('classics')">All-Day Classics</button>
+<button class="menu-filter-btn font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-1" onclick="filterMenu('seafood')">Seafood Specials</button>
+<button class="menu-filter-btn font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors pb-1" onclick="filterMenu('curries')">Traditional Curries</button>
+</div>
+</nav>
+<!-- Menu Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-12" id="menu-grid">
+<!-- Category Header -->
+<div class="col-span-full mb-4">
+<h3 class="font-headline-md text-headline-md text-secondary azulejo-border inline-block pb-1">Seafood Specials</h3>
+</div>
+<!-- Item: Stuffed Squid -->
+<div class="menu-item seafood flex gap-6 group skew-hover transition-transform duration-300">
+<div class="w-24 h-24 flex-shrink-0 rounded-xl overflow-hidden shadow-inner bg-surface-container-high border border-outline-variant">
+<img class="w-full h-full object-cover opacity-90 group-hover:opacity-100 transition-opacity" data-alt="Close-up of golden-brown pan-seared stuffed squid rings, glistening with a light butter-garlic glaze, garnished with fresh chopped coriander and a lemon wedge. The plating is rustic on a chipped ceramic plate, set against a warm, textured plaster wall background with soft morning light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHtZ6r5BRyhSbx7JbFO8tGqaoCks1iDUGaJeAIGWtJxV5Czdp9WuSmkTh6NyV7pBCEhJsg4hGwDBpsR1ho5o-2Q9mr6TrzV-FU39TVVC16CJCJkFDputuA93_KArCt7QwSPbsS6h1Hcxh6zFNkxb3p1n7IiZNxuQWck7OdgcxpRRmH8vfOXAi4oYkzMFp18ujqZk0Av_qwsKIa3YuCWNK3MDPDKrK_EicA9L4oZP-BgfeTVH9YyRKtJ060NEGrl_DC9xaHYj64meA"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-1">
+<h4 class="font-headline-md text-headline-md text-on-background group-hover:text-primary transition-colors">Stuffed Squid</h4>
+<span class="font-headline-md text-headline-md text-on-surface-variant">₹520</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Local squid stuffed with a spicy recheado masala of prawns and chorizo.</p>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-primary text-sm" title="Signature Dish">star</span>
+<span class="material-symbols-outlined text-error text-sm" title="Spicy">local_fire_department</span>
+</div>
+</div>
+</div>
+<!-- Item: Fish Recheado -->
+<div class="menu-item seafood flex gap-6 group skew-hover transition-transform duration-300">
+<div class="w-24 h-24 flex-shrink-0 rounded-xl overflow-hidden shadow-inner bg-surface-container-high border border-outline-variant">
+<img class="w-full h-full object-cover opacity-90" data-alt="A whole mackeral fried to a crisp, coated in a deep red masala paste. Served with a side of fresh onion rings and a lime half. The scene is lit with natural, warm side-lighting, highlighting the flaky texture of the fish and the rich spice crust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDhrGTh3n5R8_CIXfe8SzlO-H99AgKTaPDfkhsl72SteinuX1br88Q24Udab5zaWMDlOy_q0eGdk1X_90ZsyO0LA0XRWtAmZ4VJjrwfwbTceHfbnOZGWhrORM35zOQ4LvUktA98pj4xlVh3dhcy4hk2b5XwhmpjjWw_X5_t0KHemDgMNpU3BGOYMAOPPs2LV2FzlEjxuusa4sbpfF4sovluad9mrYxJlNzqq42s0n-9_WALkbyHedCShc24NmJ256dWzw44ej5IzIo"/>
+</div>
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-1">
+<h4 class="font-headline-md text-headline-md text-on-background">Fish Recheado</h4>
+<span class="font-headline-md text-headline-md text-on-surface-variant">₹480</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Choice of Mackeral or Kingfish, pan-fried with our secret red chili and ginger paste.</p>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-error text-sm">local_fire_department</span>
+</div>
+</div>
+</div>
+<!-- Category Header -->
+<div class="col-span-full mt-12 mb-4">
+<h3 class="font-headline-md text-headline-md text-secondary azulejo-border inline-block pb-1">Traditional Curries</h3>
+</div>
+<!-- Item: Prawn Balchão -->
+<div class="menu-item curries flex gap-6 group skew-hover transition-transform duration-300">
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-1">
+<h4 class="font-headline-md text-headline-md text-on-background">Prawn Balchão</h4>
+<span class="font-headline-md text-headline-md text-on-surface-variant">₹580</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">A fiery, pickled prawn curry with a sharp tang of palm vinegar and feni.</p>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-error text-sm">local_fire_department</span>
+</div>
+</div>
+</div>
+<!-- Item: Vegetable Caldine -->
+<div class="menu-item curries flex gap-6 group skew-hover transition-transform duration-300">
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-1">
+<h4 class="font-headline-md text-headline-md text-on-background">Vegetable Caldine</h4>
+<span class="font-headline-md text-headline-md text-on-surface-variant">₹390</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Mild and creamy yellow coconut curry with seasonal local vegetables.</p>
+<div class="flex gap-2">
+<span class="material-symbols-outlined text-tertiary text-sm" title="Vegetarian">eco</span>
+</div>
+</div>
+</div>
+<!-- Item: Chicken Cafreal -->
+<div class="menu-item classics flex gap-6 group skew-hover transition-transform duration-300">
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-1">
+<h4 class="font-headline-md text-headline-md text-on-background">Chicken Cafreal</h4>
+<span class="font-headline-md text-headline-md text-on-surface-variant">₹450</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Char-grilled chicken marinated in a vibrant green coriander and spice paste.</p>
+</div>
+</div>
+<!-- Item: Sorpotel -->
+<div class="menu-item curries flex gap-6 group skew-hover transition-transform duration-300">
+<div class="flex-grow">
+<div class="flex justify-between items-baseline mb-1">
+<h4 class="font-headline-md text-headline-md text-on-background">Sorpotel</h4>
+<span class="font-headline-md text-headline-md text-on-surface-variant">₹550</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-2">Classic Goan-Catholic pork stew, rich with liver and slow-aged spices.</p>
+</div>
+</div>
+</div>
+<!-- Decorative Divider -->
+<div class="py-24 flex justify-center items-center">
+<div class="h-px w-24 bg-outline-variant"></div>
+<span class="material-symbols-outlined text-tertiary mx-4" style="font-variation-settings: 'FILL' 1;">sailing</span>
+<div class="h-px w-24 bg-outline-variant"></div>
+</div>
+<!-- Call to Action Card -->
+<section class="bg-surface-container p-12 rounded-xl border border-dashed border-outline relative overflow-hidden">
+<div class="relative z-10 text-center max-w-2xl mx-auto">
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-4">A Taste of Fontainhas Since 1955</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">Reservations are recommended for our balcony tables overlooking the Latin Quarter streets.</p>
+<a href="findus.html" class="bg-tertiary text-on-tertiary px-10 py-4 font-label-sm text-label-sm uppercase tracking-widest rounded-full hover:bg-tertiary-container transition-all inline-block text-center">
+                    Book Your Table
+                </a>
+</div>
+<!-- Decorative corner Azulejo tiles -->
+<div class="absolute -top-4 -left-4 w-24 h-24 opacity-20 pointer-events-none">
+<div class="w-full h-full border-4 border-secondary/40 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-4xl">grid_view</span>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-container-highest border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
+<div class="text-center md:text-left">
+<h2 class="font-headline-md text-headline-md text-on-surface mb-2">Hospedaria Venite</h2>
+<p class="font-label-sm text-label-sm text-on-surface-variant">© 1955 Hospedaria Venite Panjim. Crafted with soul.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all" href="landing.html">The Story</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all" href="findus.html">Reservations</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all" href="menu.html">Goan Kitchen</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-all" href="findus.html">Find Us</a>
+</div>
+<div class="flex gap-4">
+<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-on-surface-variant hover:text-primary transition-colors" aria-label="Instagram">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" class="text-on-surface-variant hover:text-primary transition-colors" aria-label="Photo Gallery">
+<span class="material-symbols-outlined">camera</span>
+</a>
+</div>
+</div>
+</footer>
+<script>
+        function filterMenu(category) {
+            const items = document.querySelectorAll('.menu-item');
+            const buttons = document.querySelectorAll('.menu-filter-btn');
+            
+            // Update buttons
+            buttons.forEach(btn => {
+                btn.classList.remove('text-primary', 'border-primary', 'border-b-2');
+                btn.classList.add('text-on-surface-variant');
+            });
+            event.target.classList.remove('text-on-surface-variant');
+            event.target.classList.add('text-primary', 'border-primary', 'border-b-2');
+
+            // Update items
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'flex';
+                    setTimeout(() => { item.style.opacity = '1'; item.style.transform = 'translateY(0)'; }, 10);
+                } else {
+                    item.style.opacity = '0';
+                    item.style.transform = 'translateY(10px)';
+                    setTimeout(() => { item.style.display = 'none'; }, 300);
+                }
+            });
+        }
+
+        // Initialize micro-interactions
+        document.querySelectorAll('.menu-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                // Subtle haptic-like scaling if supported
+            });
+        });
+    </script>
+</body></html>

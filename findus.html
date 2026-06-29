@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Find Us | Hospedaria Venite Panjim</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;600;700&amp;family=Space+Grotesk:wght@300;500;700&amp;family=Work+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#e5e2db",
+                        "on-error": "#ffffff",
+                        "on-background": "#1c1c18",
+                        "primary": "#9c3f00",
+                        "on-primary-fixed-variant": "#7a3000",
+                        "tertiary": "#75570f",
+                        "on-secondary-fixed-variant": "#00419e",
+                        "on-surface-variant": "#584238",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#fffbff",
+                        "outline": "#8c7166",
+                        "surface-container-high": "#ebe8e1",
+                        "surface-bright": "#fcf9f2",
+                        "outline-variant": "#e0c0b2",
+                        "primary-fixed-dim": "#ffb693",
+                        "error": "#ba1a1a",
+                        "surface-container": "#f1eee7",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e5e2db",
+                        "tertiary-container": "#907027",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#001946",
+                        "secondary-fixed-dim": "#b1c5ff",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#351000",
+                        "secondary-container": "#6c98ff",
+                        "primary-container": "#c45100",
+                        "tertiary-fixed": "#ffdea1",
+                        "on-tertiary-fixed-variant": "#5c4300",
+                        "on-tertiary-fixed": "#261900",
+                        "surface-dim": "#dcdad3",
+                        "surface": "#fcf9f2",
+                        "secondary": "#2559bd",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-low": "#f6f3ec",
+                        "surface-tint": "#a04100",
+                        "inverse-surface": "#31312c",
+                        "inverse-primary": "#ffb693",
+                        "inverse-on-surface": "#f3f0e9",
+                        "primary-fixed": "#ffdbcc",
+                        "on-secondary-container": "#002f76",
+                        "background": "#fcf9f2",
+                        "on-tertiary-container": "#fffbff",
+                        "surface-container-lowest": "#ffffff",
+                        "tertiary-fixed-dim": "#e9c170",
+                        "secondary-fixed": "#dae2ff",
+                        "on-surface": "#1c1c18"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1140px",
+                        "unit": "8px",
+                        "margin-desktop": "48px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Libre Caslon Text"],
+                        "headline-xl": ["Libre Caslon Text"],
+                        "headline-lg": ["Libre Caslon Text"],
+                        "label-sm": ["Space Grotesk"],
+                        "body-lg": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "headline-md": ["Libre Caslon Text"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                        "headline-xl": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .noise-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.04;
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+        }
+
+        .arch-container {
+            border-radius: 50% 50% 0 0 / 20% 20% 0 0;
+        }
+
+        .azulejo-border {
+            border: 12px solid transparent;
+            border-image: url('https://img.freepik.com/free-vector/hand-drawn-azulejo-pattern_23-2148900650.jpg') 30 stretch;
+            /* Placeholder concept for azulejo-inspired border */
+            border-style: double;
+            border-color: #2559bd;
+        }
+
+        .divider-motif {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            color: #8c7166;
+        }
+        
+        .divider-motif::before, .divider-motif::after {
+            content: "";
+            height: 1px;
+            flex-grow: 1;
+            background: linear-gradient(to right, transparent, #8c7166, transparent);
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #9c3f00 !important;
+            box-shadow: none !important;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-md overflow-x-hidden selection:bg-primary/20">
+<div class="noise-overlay"></div>
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-surface/80 backdrop-blur-sm shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<button class="text-primary active:scale-95 transition-transform md:hidden">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<a class="font-headline-lg text-headline-lg text-primary tracking-tight md:text-headline-xl" href="landing.html">
+                Hospedaria Venite
+            </a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="landing.html">Heritage Home</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="menu.html">Goan Kitchen</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-colors" href="bar.html">Bohemian Bar</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-label-sm text-label-sm" href="findus.html">Find Us</a>
+</div>
+<a href="findus.html" class="text-primary active:scale-95 transition-transform">
+<span class="material-symbols-outlined">book_online</span>
+</a>
+</div>
+</header>
+<main class="flex-grow">
+<!-- Hero Section -->
+<section class="relative py-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto overflow-hidden">
+<div class="text-center mb-12">
+<p class="font-label-sm text-label-sm text-tertiary uppercase tracking-[0.2em] mb-4">Established 1955</p>
+<h1 class="font-headline-xl text-headline-xl text-on-background mb-4 md:text-6xl">Find Your Way to Our Balcony</h1>
+<div class="divider-motif max-w-xs mx-auto">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">sailing</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Map & Directions (Bento Style Left) -->
+<div class="lg:col-span-7 space-y-6">
+<div class="bg-surface-container-low p-2 rounded-xl shadow-sm border border-outline-variant relative group overflow-hidden">
+<div class="absolute top-4 right-4 z-10 bg-surface/90 backdrop-blur px-4 py-2 rounded-full border border-primary/20 shadow-lg flex items-center gap-2">
+<span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-on-surface">We are open until 11:00 PM</span>
+</div>
+<div class="w-full h-[500px] bg-surface-dim relative overflow-hidden rounded-lg border-4 border-secondary/20">
+<img class="w-full h-full object-cover grayscale-[0.2] contrast-[1.1]" data-alt="A vintage-style illustrative map of Fontainhas, the Latin Quarter of Panjim, Goa. The map features warm ochre and terracotta building icons, narrow cobblestone streets, and the historic Hospedaria Venite clearly marked with a red terracotta pin. The visual style is hand-drawn, mimicking a traveler's sketchbook with subtle paper textures and watercolor washes of blue and orange." data-location="Panjim, Goa" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_D_QnZmjJ5mEPM5WhD8ZrE-RDSCMRNBonAYiRtB2fa1sY0fGJ5ZQp-6K9PDzUf5Ueljf-YFGWNgCOpJ9rII-i_xqWHxsxOHFpSZTxHMjWKCkvE-idQjIPHoOaCTVpbdX6XWmnbK4-Pmg8nsl_beHLiR59YnN-5p5aldbGa9ZZRhjHVO51qo5UyKWkUYgGufFUlTnlS1T34DNSCvgLPdFBUr426m-PkbeiF7qdzKh0OZcEnekaywo218GXaWXEpuQfzK-gVZSAl9c"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="bg-surface-container p-8 rounded-xl border-b-4 border-primary/30">
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">The Address</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                                31st January Road,<br/>
+                                Fontainhas, Panjim,<br/>
+                                Goa 403001, India
+                            </p>
+<a class="flex items-center gap-2 text-primary font-label-sm text-label-sm hover:translate-x-2 transition-transform" href="https://maps.google.com/?q=Hospedaria+Venite+Fontainhas+Panjim+Goa" target="_blank" rel="noopener noreferrer">
+                                OPEN IN GOOGLE MAPS <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="bg-surface-container p-8 rounded-xl border-b-4 border-tertiary/30">
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">Operating Hours</h3>
+<ul class="space-y-2 font-body-md text-body-md text-on-surface-variant">
+<li class="flex justify-between"><span>Mon - Sat</span> <span>9:00 AM - 11:00 PM</span></li>
+<li class="flex justify-between"><span>Sunday</span> <span>Closed</span></li>
+<li class="pt-4 text-primary font-medium italic">Kitchen closes at 10:30 PM</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Booking Widget (Bento Style Right) -->
+<aside class="lg:col-span-5">
+<div class="bg-surface-container-high p-8 md:p-10 rounded-xl shadow-xl border border-outline-variant relative">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-primary text-on-primary px-6 py-2 rounded-full font-label-sm text-label-sm shadow-lg tracking-widest">
+                            RESERVATIONS
+                        </div>
+<h2 class="font-headline-lg text-headline-lg text-center mt-4 mb-2">Secure Your View</h2>
+<p class="text-center font-body-md text-body-md text-on-surface-variant mb-8 px-4">Our famous balcony tables are limited and highly sought after. Book at least 24 hours in advance.</p>
+<form id="bookingForm" class="space-y-6">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-2 uppercase">Full Name</label>
+<input id="guestName" class="w-full bg-transparent border-b-2 border-outline focus:border-primary transition-colors py-3 font-body-lg text-on-surface" placeholder="Your name as it appears in history" type="text" required/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-2 uppercase">Date</label>
+<input id="bookingDate" class="w-full bg-transparent border-b-2 border-outline focus:border-primary transition-colors py-3 font-body-lg text-on-surface" type="date" required/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-2 uppercase">Guests</label>
+<select id="guestCount" class="w-full bg-transparent border-b-2 border-outline focus:border-primary transition-colors py-3 font-body-lg text-on-surface">
+<option>2 People</option>
+<option>3 People</option>
+<option>4 People (Max)</option>
+</select>
+</div>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-2 uppercase">Preferred Time</label>
+<div id="timeSlots" class="grid grid-cols-3 gap-2">
+<button class="time-slot border border-outline py-2 font-label-sm text-label-sm rounded-lg hover:bg-primary-container/10 transition-all" type="button">12:30 PM</button>
+<button class="time-slot border border-primary bg-primary text-on-primary py-2 font-label-sm text-label-sm rounded-lg" type="button">7:30 PM</button>
+<button class="time-slot border border-outline py-2 font-label-sm text-label-sm rounded-lg hover:bg-primary-container/10 transition-all" type="button">9:00 PM</button>
+</div>
+<input type="hidden" id="selectedTime" value="7:30 PM"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm text-on-surface-variant block mb-2 uppercase">Phone Number</label>
+<input id="phoneNumber" class="w-full bg-transparent border-b-2 border-outline focus:border-primary transition-colors py-3 font-body-lg text-on-surface" placeholder="+91 9XXXXXXXXX" type="tel" required/>
+</div>
+<div class="flex items-start gap-3 p-4 bg-tertiary-container/10 rounded-lg border border-tertiary-container/20">
+<span class="material-symbols-outlined text-tertiary">info</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant">Balcony seating is weather-dependent and subject to availability on arrival.</p>
+</div>
+<button id="whatsappBtn" class="w-full bg-[#25D366] text-white font-headline-md text-headline-md py-4 rounded-xl shadow-lg hover:bg-[#20BA5C] active:scale-95 transition-all relative group overflow-hidden flex items-center justify-center gap-3" type="button">
+<span class="relative z-10 flex items-center gap-3">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<span>Send via WhatsApp</span>
+</span>
+<div class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+</button>
+<p class="text-center font-label-sm text-label-sm text-on-surface-variant mt-3">Your reservation will be sent directly to our WhatsApp</p>
+</form>
+<div class="mt-8 pt-8 border-t border-outline-variant flex flex-col items-center gap-4">
+<span class="font-label-sm text-label-sm text-on-surface-variant">FOR SAME DAY BOOKINGS</span>
+<a class="flex items-center gap-3 bg-secondary text-on-secondary px-8 py-3 rounded-full font-label-sm text-label-sm hover:shadow-lg transition-all active:scale-95" href="tel:+918322222222">
+<span class="material-symbols-outlined">call</span>
+                                CALL DIRECTLY: +91 832 242 5837
+                            </a>
+</div>
+</div>
+</aside></div>
+</section>
+<!-- Aesthetic Spacer -->
+<div class="py-16 flex flex-col items-center">
+<div class="divider-motif w-full max-w-2xl px-margin-mobile">
+<span class="material-symbols-outlined text-primary text-4xl">local_florist</span>
+</div>
+<p class="mt-6 font-headline-md text-headline-md text-outline italic text-center px-4">"A window to the past, a balcony for the soul."</p>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full mt-auto bg-surface-container-highest border-t border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-mobile md:px-margin-desktop py-12 gap-gutter max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-headline-md text-headline-md text-on-surface mb-2">Hospedaria Venite</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant tracking-wide uppercase opacity-80">
+                    © 1955 Panjim. Crafted with soul.
+                </p>
+</div>
+<nav class="flex gap-6">
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-all" href="landing.html">The Story</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-all" href="findus.html">Reservations</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-all" href="menu.html">Goan Kitchen</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary transition-all" href="findus.html">Find Us</a>
+</nav>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full flex items-center justify-center bg-on-surface/5 text-on-surface hover:bg-primary hover:text-on-primary transition-all" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-10 h-10 rounded-full flex items-center justify-center bg-on-surface/5 text-on-surface hover:bg-primary hover:text-on-primary transition-all" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Photo Gallery">
+<span class="material-symbols-outlined">camera</span>
+</a>
+<a class="w-10 h-10 rounded-full flex items-center justify-center bg-on-surface/5 text-on-surface hover:bg-primary hover:text-on-primary transition-all" href="mailto:info@hospedariavenite.com" aria-label="Email Us">
+<span class="material-symbols-outlined">mail</span>
+</a>
+</div>
+</div>
+</footer>
+<!-- FAB (Suppressed as per rules for Details/Transactional pages, but shown here for UI completeness if requested) -->
+<script>
+        // Micro-interaction for form inputs
+        const inputs = document.querySelectorAll('input, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('label').style.color = '#9c3f00';
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.querySelector('label').style.color = '#584238';
+            });
+        });
+
+        // Sticky header opacity shift on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-surface/95', 'shadow-md');
+                header.classList.remove('bg-surface/80');
+            } else {
+                header.classList.remove('bg-surface/95', 'shadow-md');
+                header.classList.add('bg-surface/80');
+            }
+        });
+
+        // Time slot selection
+        const timeSlots = document.querySelectorAll('.time-slot');
+        const selectedTimeInput = document.getElementById('selectedTime');
+
+        timeSlots.forEach(slot => {
+            slot.addEventListener('click', () => {
+                // Remove active state from all slots
+                timeSlots.forEach(s => {
+                    s.classList.remove('border-primary', 'bg-primary', 'text-on-primary');
+                    s.classList.add('border-outline', 'hover:bg-primary-container/10');
+                });
+                // Add active state to clicked slot
+                slot.classList.remove('border-outline', 'hover:bg-primary-container/10');
+                slot.classList.add('border-primary', 'bg-primary', 'text-on-primary');
+                // Update hidden input
+                selectedTimeInput.value = slot.textContent;
+            });
+        });
+
+        // WhatsApp form submission
+        const whatsappBtn = document.getElementById('whatsappBtn');
+        const guestName = document.getElementById('guestName');
+        const bookingDate = document.getElementById('bookingDate');
+        const guestCount = document.getElementById('guestCount');
+        const phoneNumber = document.getElementById('phoneNumber');
+
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        bookingDate.setAttribute('min', today);
+
+        whatsappBtn.addEventListener('click', () => {
+            // Validate required fields
+            if (!guestName.value.trim()) {
+                guestName.classList.add('border-red-500');
+                guestName.focus();
+                return;
+            }
+            if (!bookingDate.value) {
+                bookingDate.classList.add('border-red-500');
+                bookingDate.focus();
+                return;
+            }
+            if (!phoneNumber.value.trim()) {
+                phoneNumber.classList.add('border-red-500');
+                phoneNumber.focus();
+                return;
+            }
+
+            // Remove error states
+            [guestName, bookingDate, phoneNumber].forEach(el => el.classList.remove('border-red-500'));
+
+            // Format date for display
+            const dateObj = new Date(bookingDate.value);
+            const formattedDate = dateObj.toLocaleDateString('en-IN', {
+                weekday: 'long',
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric'
+            });
+
+            // Build WhatsApp message
+            const message = `🪑 *BALCONY TABLE REQUEST*
+━━━━━━━━━━━━━━━━━━
+
+👤 *Name:* ${guestName.value.trim()}
+📅 *Date:* ${formattedDate}
+🕐 *Time:* ${selectedTimeInput.value}
+👥 *Guests:* ${guestCount.value}
+
+━━━━━━━━━━━━━━━━━━
+
+Sent from Hospedaria Venite Website`;
+
+            // Encode message for WhatsApp URL
+            const encodedMessage = encodeURIComponent(message);
+
+            // WhatsApp phone number (India format - 91 followed by 10 digits)
+            // Replace with actual WhatsApp number: 91XXXXXXXXXX
+            const whatsappNumber = '919876543210';
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            // Open WhatsApp
+            window.open(whatsappUrl, '_blank');
+        });
+
+        // Remove error styling on input
+        [guestName, bookingDate, phoneNumber].forEach(input => {
+            input.addEventListener('input', () => {
+                input.classList.remove('border-red-500');
+            });
+        });
+    </script>
+</body></html>
