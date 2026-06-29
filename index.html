@@ -5,9 +5,8 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Hospedaria Venite | Since 1955</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;600;700&amp;family=Space+Grotesk:wght@500&amp;family=Work+Sans:wght@400;500&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:wght@400;600;700&family=Space+Grotesk:wght@500&family=Work+Sans:wght@400;500&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
 <!-- Design System Tokens & Configuration -->
 <script id="tailwind-config">
       tailwind.config = {
@@ -154,13 +153,13 @@
 <body class="bg-background text-on-background font-body-md selection:bg-primary-fixed-dim selection:text-on-primary-fixed overflow-x-hidden">
 <!-- TopAppBar -->
 <header class="w-full top-0 sticky z-50 bg-surface-variant/30 dark:bg-surface-container-highest/20 backdrop-blur-sm shadow-sm">
-<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
 <button aria-label="Menu" class="text-primary dark:text-primary-fixed-dim transition-transform active:scale-95 md:hidden">
 <span class="material-symbols-outlined" data-icon="menu">menu</span>
 </button>
 <!-- Desktop Navigation -->
 <nav class="hidden md:flex gap-6">
-<a class="font-label-sm text-label-sm text-primary border-b-2 border-primary pb-1" href="landing.html">Heritage Home</a>
+<a class="font-label-sm text-label-sm text-primary border-b-2 border-primary pb-1" href="index.html">Heritage Home</a>
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="menu.html">Goan Kitchen</a>
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="bar.html">Bohemian Bar</a>
 <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors" href="findus.html">Find Us</a>
@@ -172,7 +171,7 @@
 <a href="findus.html" aria-label="Book Online" class="text-primary dark:text-primary-fixed-dim transition-transform active:scale-95">
 <span class="material-symbols-outlined" data-icon="book_online">book_online</span>
 </a>
-</nav>
+</div>
 </header>
 <main>
 <!-- Hero Section -->
@@ -272,11 +271,11 @@
 </div>
 </div>
 <!-- Bento Card 2: Bar -->
-<div class="group bg-tertiary-fixed text-on-tertiary-fixed p-8 flex flex-col justify-end min-h-[300px] border border-outline-variant/50">
+<a href="bar.html" class="group bg-tertiary-fixed text-on-tertiary-fixed p-8 flex flex-col justify-end min-h-[300px] border border-outline-variant/50">
 <span class="material-symbols-outlined text-4xl mb-4" data-icon="local_bar">local_bar</span>
 <h4 class="font-headline-md text-headline-md">The Bohemian Bar</h4>
 <p class="font-label-sm text-label-sm mt-2 opacity-80">Local Feni &amp; Global Stories</p>
-</div>
+</a>
 <!-- Bento Card 3: Find Us -->
 <div class="md:col-span-3 flex flex-col md:flex-row bg-surface-container-highest border border-outline-variant/50">
 <div class="flex-1 p-12 space-y-6">
@@ -315,7 +314,7 @@
                 </p>
 </div>
 <div class="flex flex-wrap justify-center gap-8">
-<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:underline transition-all" href="landing.html">The Story</a>
+<a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:underline transition-all" href="index.html">The Story</a>
 <a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:underline transition-all" href="findus.html">Reservations</a>
 <a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:underline transition-all" href="menu.html">Goan Kitchen</a>
 <a class="text-on-surface-variant font-label-sm text-label-sm hover:text-primary hover:underline transition-all" href="findus.html">Find Us</a>
